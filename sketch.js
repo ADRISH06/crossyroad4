@@ -81,15 +81,6 @@ else if(( player.spt.y > height-1550 && player.spt.y < height-1300) ||
 
   if(gameState==PLAY)
   {
-  if(keyCode == UP_ARROW){
-    player.move(0,-2);
-  }else if(keyCode == DOWN_ARROW){
-    player.move(0,2);
-  }else if(keyCode == LEFT_ARROW){
-    player.move(-2,0);
-  }else if(keyCode == RIGHT_ARROW){
-    player.move(2,0);
-  }
 
   if(city.isTouching(player.spt))
   {
@@ -100,7 +91,15 @@ else if(( player.spt.y > height-1550 && player.spt.y < height-1300) ||
   
   if(gameState==WIN)
   {
-  
+    if(keyCode == UP_ARROW){
+      player.move(0,0);
+    }else if(keyCode == DOWN_ARROW){
+      player.move(0,0);
+    }else if(keyCode == LEFT_ARROW){
+      player.move(0,0);
+    }else if(keyCode == RIGHT_ARROW){
+      player.move(0,0);
+    }
    player.spt.pause();
     textSize(40);
     stroke("blue");
